@@ -16,9 +16,9 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+  <div>
+  <!- Segundo elemento do array é o value do select? ->
+    <%= form.select :category_id, Category.all.collect {|c| [c.name, c.id]} %>
   </div>
 
   <div class="actions">
